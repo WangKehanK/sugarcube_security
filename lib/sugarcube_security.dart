@@ -1,7 +1,5 @@
 library sugarcube_security;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+// Import/Export file here
+export 'app_lifecycle_overlay/app_lifecycle_overlay.dart';
+
