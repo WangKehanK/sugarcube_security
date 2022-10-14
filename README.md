@@ -13,6 +13,8 @@ SugarCube Security package is built by Cornell Tech Spec Team. We are aiming to 
 
 ## Usage of Blur/hide the screen when the app is at background:
 
+![Dotzz_Blur_Sample](./images/hide_sample.png)
+
 In main.dart, wrap the target screen with Overlay() and AppLifecycleOverlay():
 
 ```
