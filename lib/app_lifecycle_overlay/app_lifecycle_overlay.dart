@@ -43,13 +43,22 @@ class _AppLifecycleOverlayState extends State<AppLifecycleOverlay>
       return Stack(
         children: [
           Container(
-            width: MediaQuery.of(context).size.width,
-            decoration: const BoxDecoration(
-              color: Colors.white,
-              image: DecorationImage(
-                scale: 0.5,
-                fit: BoxFit.fill,
-                image: AssetImage("images/logo.png"), // TODO: Replace with a new image
+            color: Colors.white,
+            child: SafeArea(
+              child: Center(
+                child: Container(
+                  // padding: const EdgeInsets.all(0.0),
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    image: DecorationImage(
+                      scale: 0.5,
+                      fit: BoxFit.fill,
+                      image: AssetImage("images/logo.png"),
+                    ),
+                  ),
+                  width: 120.0,
+                  height: 120.0,
+                ),
               ),
             ),
           )
