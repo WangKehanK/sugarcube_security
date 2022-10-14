@@ -42,15 +42,17 @@ class _AppLifecycleOverlayState extends State<AppLifecycleOverlay>
     if (shouldBlur) {
       return Stack(
         children: [
-          widget.child,
-          BackdropFilter(
-            filter: ImageFilter.blur(sigmaX: 8, sigmaY: 8),
-            child: Container(
-              height: MediaQuery.of(context).size.height,
-              width: MediaQuery.of(context).size.width,
-              color: Colors.grey.shade200.withOpacity(0.5),
+          Container(
+            width: MediaQuery.of(context).size.width,
+            decoration: const BoxDecoration(
+              color: Colors.white,
+              image: DecorationImage(
+                scale: 0.5,
+                fit: BoxFit.fill,
+                image: AssetImage("images/logo.png"), // TODO: Replace with a new image
+              ),
             ),
-          ),
+          )
         ],
       );
     }
