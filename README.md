@@ -37,3 +37,32 @@ In android/app/src/main/AndroidManifest.xml, remove the following block
               />
 
 ```
+
+
+## Usage of Dynamically change the App icons feature:
+
+Reference: 
+- https://pub.dev/packages/flutter_dynamic_icon
+- https://medium.com/flutter-community/programatically-change-ios-app-icon-in-flutter-c9e84bc541a2
+
+IMPORTANT! This feature requires to use a flutter plugin that currently only supports ios.
+Please refer to the documents above on how to create an App icon and setup parameters inside ios folder.
+
+For demo purpose, 2 App icons have been pre-created to showcase the feature.
+
+In login_screen.dart, call the function DynamicIconChangeField()
+
+```
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Flexible(
+                  child: ElevatedButton(
+                onPressed: () =>
+                    DotzzNavigator.pushNamed(context, DotzzRoutes.homeScreen),
+                child: Text(localize('Login')),
+              )),
+            ]),
+            DynamicIconChangeField(),
+
+```
+
+
