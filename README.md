@@ -45,6 +45,7 @@ Reference:
 
 IMPORTANT! This feature requires to use a flutter plugin that currently only supports ios.
 Please refer to the documents above on how to create an App icon and setup parameters inside ios folder.
+
 For demo purpose, 2 App icons have been pre-created to showcase the feature.
 
 In login_screen.dart, call the function DynamicIconChangeField()
