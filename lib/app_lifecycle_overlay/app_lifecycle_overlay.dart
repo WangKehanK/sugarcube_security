@@ -2,12 +2,19 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class AppLifecycleOverlay extends StatefulWidget {
+
   const AppLifecycleOverlay({
     Key? key,
     required this.child,
+    required this.imagePath,
+    required this.imageWidth,
+    required this.imageHeight
   }) : super(key: key);
 
   final Widget child;
+  final String imagePath;
+  final double imageWidth;
+  final double imageHeight;
 
   @override
   State<AppLifecycleOverlay> createState() => _AppLifecycleOverlayState();
@@ -48,16 +55,16 @@ class _AppLifecycleOverlayState extends State<AppLifecycleOverlay>
               child: Center(
                 child: Container(
                   // padding: const EdgeInsets.all(0.0),
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     color: Colors.white,
                     image: DecorationImage(
                       scale: 0.5,
                       fit: BoxFit.fill,
-                      image: AssetImage("images/logo.png"),
+                      image: AssetImage(widget.imagePath),
                     ),
                   ),
-                  width: 120.0,
-                  height: 120.0,
+                  width: widget.imageWidth,
+                  height: widget.imageHeight,
                 ),
               ),
             ),

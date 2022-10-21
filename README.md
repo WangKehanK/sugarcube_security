@@ -15,12 +15,17 @@ SugarCube Security package is built by Cornell Tech Spec Team. We are aiming to 
 
 In main.dart, wrap the target screen with Overlay() and AppLifecycleOverlay():
 
+To gain more flexibilities, I make three variable in AppLifecycleOverlay, which are imagePath, imageWidth, and imageHeight, so that we can adjust logo size from main.dart. 
+
 ```
           home: Overlay(
             initialEntries: <OverlayEntry>[
               OverlayEntry(
                 builder: (BuildContext context) => AppLifecycleOverlay(
                   child: LoginScreen(),
+                  imagePath: "images/logo.png",
+                  imageWidth: MediaQuery.of(context).size.width * 1/3 ,
+                  imageHeight: MediaQuery.of(context).size.height * 1/5,
                 ),
               )
             ],
