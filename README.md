@@ -34,7 +34,7 @@ To gain more flexibilities, I make three variable in AppLifecycleOverlay, which 
           ),
 ```
 
-In android/app/src/main/AndroidManifest.xml, remove the following block
+This is to fix android-end bug: In android/app/src/main/AndroidManifest.xml, remove the following block
 ```
             <meta-data
               android:name="io.flutter.embedding.android.SplashScreenDrawable"
