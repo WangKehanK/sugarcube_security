@@ -50,7 +50,10 @@ Reference:
 - https://pub.dev/packages/flutter_dynamic_icon
 - https://medium.com/flutter-community/programatically-change-ios-app-icon-in-flutter-c9e84bc541a2
 
-IMPORTANT! This feature requires to use a flutter plugin that currently only supports ios.
+IMPORTANT! This feature requires to use a flutter plugin that currently only supports ios. To install it, you have to run
+```
+flutter pub get
+```
 Please refer to the documents above on how to create an App icon and setup parameters inside ios folder.
 
 For demo purpose, 2 App icons have been pre-created to showcase the feature.
