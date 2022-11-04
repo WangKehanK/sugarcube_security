@@ -70,4 +70,45 @@ In login_screen.dart, call the function DynamicIconChangeField()
 
 ```
 
+## Dotzz Gate Usage
 
+In main.dart, and work with AppLifecycleOverlay, and long click at the + button, the gate will open (navigate to Dotzz from Todo App):
+```
+          home: Overlay(
+            initialEntries: <OverlayEntry>[
+              OverlayEntry(
+                builder: (BuildContext context) => AppLifecycleOverlay(
+                  child: DotzzGateHomePage(
+                      child: LoginScreen()
+                  ),
+                  imagePath: "images/logo.png",
+                  imageWidth: MediaQuery.of(context).size.width * 1/3 ,
+                  imageHeight: MediaQuery.of(context).size.height * 1/5,
+                ),
+              )
+            ],
+          ),
+```
+
+And for any selected area that you want to make it a gate, and wrap the Widget with MagicContainer class, don't forget to pass in the target widget/screen to MagicContainer; for example
+```
+class DotzzAppBar extends StatelessWidget {
+  final Widget child;
+
+  const DotzzAppBar({Key? key, required this.child}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MagicContainer(gate: HomeScreen(),
+    child: Container(
+        padding: EdgeInsets.all(16.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            this.child,
+          ],
+        )));
+  }
+}
+
+```
