@@ -47,13 +47,17 @@ class _HomeState extends State<DotzzGateHomePage> {
                           top: 50,
                           bottom: 20,
                         ),
-                        child: const Text(
-                          'All ToDos',
-                          style: TextStyle(
-                            fontSize: 30,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
+                        child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const <Widget>[
+                              Text(
+                                'Dotzz Today',
+                                style: TextStyle(
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              )
+                            ]),
                       ),
                       for (ToDo todoo in _foundToDo.reversed)
                         ToDoItem(
@@ -149,7 +153,7 @@ class _HomeState extends State<DotzzGateHomePage> {
   }
 
   void _addToDoItem(String toDo) {
-    if(toDo == null || toDo == ""){
+    if (toDo == "") {
       return;
     }
     setState(() {
@@ -160,5 +164,4 @@ class _HomeState extends State<DotzzGateHomePage> {
     });
     _todoController.clear();
   }
-
 }
